@@ -1,0 +1,126 @@
+///////SQL MOVIE QUERY EXERCISE//////
+
+
+1.
+SELECT 
+    *
+FROM
+    movies.movies;
+
+/////////////////////////////////////
+
+2.
+SELECT 
+    title, movieid
+FROM
+    movies.movies
+LIMIT 10;
+
+
+/////////////////////////////////////
+
+3.
+SELECT 
+    movieid, title
+FROM
+    movies.movies
+WHERE
+    movieid = '485';
+
+/////////////////////////////////////
+
+4.
+SELECT 
+    movieid, title
+FROM
+    movies.movies
+WHERE
+    title = 'Made in America (1993)';
+
+
+/////////////////////////////////////
+
+5.
+SELECT 
+    *
+FROM
+    movies.movies
+WHERE
+    title LIKE 'a%'
+ORDER BY title
+LIMIT 10;
+
+
+////////////////////////////////////
+
+6.
+SELECT 
+    *
+FROM
+    movies.movies
+WHERE
+    title LIKE '%2002%';
+
+///////////////////////////////////
+
+7.
+SELECT 
+    *
+FROM
+    movies.movies
+WHERE
+    title LIKE '%Godfather, The%';
+
+
+//////////////////////////////////
+
+8.
+SELECT 
+    *
+FROM
+    movies.movies
+WHERE
+    genres LIKE '%comedy%';
+
+
+//////////////////////////////////
+
+9.
+SELECT 
+    *
+FROM
+    movies.movies
+WHERE
+    genres LIKE '%comedy%'
+        AND title LIKE '%2000%';
+
+
+///////////////////////////////////
+
+10.
+SELECT 
+    *
+FROM
+    movies.movies
+        INNER JOIN
+    movies.tags ON movies.movies.movieid = movies.tags.movieid
+WHERE
+    genres LIKE '%comedy%'
+        AND tag LIKE '%death';
+
+///////////////////////////////////
+
+11.
+SELECT
+*
+FROM
+movies.movies
+WHERE title LIKE '%Super%' '%(2001)%' OR '%Super%' '%(2000)%';
+
+
+
+SUPERTROOPERS!!
+
+
+
+
