@@ -111,11 +111,13 @@ WHERE
 ///////////////////////////////////
 
 11.
-SELECT
-*
+SELECT 
+    *
 FROM
-movies.movies
-WHERE title LIKE '%Super%' '%(2001)%' OR '%Super%' '%(2000)%';
+    movies.movies
+WHERE
+    title LIKE '%Super%''%(2001)%'
+        OR '%Super%''%(2000)%';
 
 
 
